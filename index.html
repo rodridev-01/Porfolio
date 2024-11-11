@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rodrigo's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="images/icon/dev.ico" rel="icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Página en Desarrollo -->
+    <div id="development-message" class="development-message">
+        <div class="message-content">
+            <img src="https://media.tenor.com/scX-kVPwUn8AAAAM/this-is-fine.gif" alt="Desarrollo" class="development-image">
+            <p>¡Página aun en desarrollo!</p>
+            <button onclick="closeDevelopmentMessage()" class="close-button">Cerrar</button>
+        </div>
+    </div>
+
+    <!-- Navbar y contenido de la página -->
+    <header class="navbar">
+        <nav>
+            <ul>
+                <li><a href="#experiencia">Experiencia</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li>
+                    <button class="theme-toggle" aria-label="Toggle theme">
+                        <i class="fa-regular fa-moon" id="theme-icon"></i>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container" id="experiencia">
+        <!-- Hero Section -->
+        <section class="hero intro">
+            <img src="/images/perfil.png" alt="Me" class="profile-pic">
+            <span class="availability">Disponible para trabajar</span>
+            <h1>Hi, I'm Rodrigo.</h1>
+            <p>Con experiencia en el desarrollo de sistemas, <strong>mi enfoque se centra en garantizar un rendimiento
+                    óptimo.</strong> Colaborador efectivo en equipos, estoy preparado para enfrentar desafíos y
+                contribuir al éxito conjunto en cada proyecto.</p>
+            <div class="buttons">
+                <a href="https://github.com/rodridev-01" class="button"><i class="fab fa-github"></i> Github</a>
+                <a href="https://www.linkedin.com/in/rodridev26" class="button"><i class="fab fa-linkedin"></i>
+                    LinkedIn</a>
+                <a href="https://www.instagram.com/rodrigou.py" class="button"><i class="fab fa-instagram"></i>
+                    Instagram</a>
+            </div>
+        </section>
+
+        <!-- Experiencia y Proyectos -->
+        <main class="blog-content">
+            <section id="">
+                <h2>Mi Experiencia</h2>
+                <p>Descripción de mi experiencia en programación y desarrollo de sistemas...</p>
+            </section>
+
+            <section id="proyectos">
+                <h2>Proyectos Destacados</h2>
+                <p>A continuación se encuentran algunos de los proyectos en los que he trabajado:</p>
+                <div class="project-grid">
+                    <!-- Bookstore E-Commerce Project -->
+                    <div class="project-card">
+                        <h3>Bookstore E-Commerce</h3>
+                        <p>Una plataforma de comercio electrónico para la venta de libros, donde los usuarios pueden comprar y gestionar su carrito de compras.</p>
+                        <a href="https://github.com/rodridev-01/Bookstore-Ecomerce" target="_blank" class="button">Ver Proyecto</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Contacto -->
+        <section id="contact" class="contact">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out and join the Rebellion!</p>
+            <form id="contact-form" action="https://formspree.io/f/xnnqvjwd" method="POST">
+                <input type="text" id="name" name="name" placeholder="Name" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <textarea id="message" name="message" placeholder="Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
