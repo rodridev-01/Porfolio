@@ -72,11 +72,15 @@ body {
 /* Hero Section */
 section{
     max-width: 600px;
-    margin-top: 40px;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     text-align: left;
+    margin-top: 60px;
+    padding: 30px;
+    color: #d0d0d0;
 }
+
 .hero {
     text-align: center;
     max-width: 600px;
@@ -185,11 +189,6 @@ p {
 }
 
 /* Sections */
-section {
-    margin-top: 60px;
-    padding: 30px;
-}
-
 .about,
 .projects,
 .contact {
