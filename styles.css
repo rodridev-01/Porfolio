@@ -70,6 +70,13 @@ body {
 }
 
 /* Hero Section */
+section{
+    max-width: 600px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
 .hero {
     text-align: center;
     max-width: 600px;
@@ -77,7 +84,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
 }
 
 .hero h1 {
@@ -187,7 +193,6 @@ section {
 .about,
 .projects,
 .contact {
-    color: #f7c02b;
     margin-top: 50px;
     border-radius: 5px;
     text-align: left;
@@ -202,16 +207,86 @@ section {
 }
 
 .project-card {
-    background-color: rgba(87, 87, 87, 0.4);
-    padding: 20px;
-    width: 200px;
+    background-color: transparent;
+    padding: 0;
+    width: 100%; 
+    max-width: 600px; 
     border-radius: 8px;
-    transition: transform 0.3s;
+    text-align: center;
+    box-shadow: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
-    transform: scale(1.1);
+    transform: scale(1.03);
+    background-color: #000;
 }
+.project-card h3{
+    color: #fff;
+}
+
+.project-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: opacity 0.3s ease;
+}
+
+.project-img:hover {
+    opacity: 0.9;
+}
+
+.project-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/* GitHub Button */
+.github-button,
+.play-button {
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* GitHub Button */
+.github-button {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid transparent;
+}
+
+.github-button:hover {
+    background-color: #444;
+    transform: translateY(-0.5px);
+}
+
+/* Play Button */
+.play-button {
+    background-color: #f7c02b;
+    color: #000;
+    border: 1px solid transparent;
+}
+
+.play-button:hover {
+    background-color: #e1b02b;
+    transform: translateY(-2px);
+}
+
+.button i {
+    font-size: 18px;
+}
+
+
 
 .container {
     max-width: 800px;
@@ -233,6 +308,7 @@ form textarea {
     background: #333;
     border: 1px solid #f7c02b;
     color: #f7c02b;
+    border-radius: 5px;
 }
 
 form button {
@@ -242,6 +318,7 @@ form button {
     border: none;
     cursor: pointer;
     transition: background 0.3s;
+    border-radius: 5px;
 }
 
 form button:hover {
@@ -271,30 +348,6 @@ form button:hover {
 .button:hover {
     background-color: #333;
     color: #EAB308;
-}
-
-/* Blog Content */
-.blog-content {
-    max-width: 800px;
-    margin-top: 40px;
-    padding: 20px;
-    border-radius: 8px;
-}
-
-.blog-content article {
-    margin-bottom: 30px;
-}
-
-.blog-content h2 {
-    font-size: 1.8em;
-    font-family: 'Star Jedi', sans-serif;
-    margin-bottom: 10px;
-}
-
-.blog-content p {
-    font-size: 1em;
-    line-height: 1.6;
-    color: #d1d5db;
 }
 
 /* Stars Background */
@@ -365,13 +418,23 @@ form button:hover {
     color: #d1d5db;
 }
 
+.dark-mode .navbar a:hover {
+    color: #f7c02b;
+}
+.dark-mode .project-card:hover {
+    background-color: #fff;
+}
+.dark-mode .project-card h3{
+    color: #000;
+}
+
 .development-message {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
     display: flex;
     justify-content: center;
@@ -382,15 +445,15 @@ form button:hover {
 .message-content {
     text-align: center;
     padding: 20px;
-    background-color: #333;
+    background-color: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 .development-image {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 20px;
+    width: 250px;
+    height: 200px;
+    margin-bottom: 5px;
     border-radius: 10px;
 }
 
@@ -407,4 +470,62 @@ form button:hover {
 
 .close-button:hover {
     background-color: #e6b200;
+}
+
+h2{
+   color: #e6b200;;
+}
+
+/* Footer */
+.footer {
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-info h2 {
+    font-size: 1.5em;
+    margin: 0;
+    color: #f7c02b; 
+}
+
+.footer-info p {
+    font-size: 0.9em;
+    color: #aaa;
+    margin: 0;
+}
+
+.footer-social a {
+    color: #f7c02b;
+    font-size: 1.2em;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: #e1b02b;
+}
+
+.footer-links {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-links a {
+    color: #aaa;
+    font-size: 0.9em;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #f7c02b;
 }

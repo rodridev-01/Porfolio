@@ -54,6 +54,25 @@ themeToggleButton.addEventListener('click', () => {
     }
 });
 
+let clickCount = 0;
+const gifs = [
+    "https://media.tenor.com/scX-kVPwUn8AAAAM/this-is-fine.gif",
+    "https://media3.giphy.com/media/3jbR27OLT5YJv0ewvN/giphy.gif?cid=6c09b952kk0pzywlv4bhnjqh4zzv2jsmwqtc0r7j1f0de8d6&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g",
+    "https://media.tenor.com/xtjwnNUUUo8AAAAM/it%27s-fine-im-fine.gif",
+    "https://media4.giphy.com/media/9M5jK4GXmD5o1irGrF/200w.gif?cid=6c09b952rm9l3q9gqntv7buxrd4q5zg54czsjjilv6huyu2u&ep=v1_gifs_search&rid=200w.gif&ct=g",
+];
+
+function handleSapoClick() {
+    clickCount++;
+    const gifElement = document.getElementById('development-gif');
+
+    if (clickCount < gifs.length) {
+        gifElement.src = gifs[clickCount];
+    } else {
+        closeDevelopmentMessage();
+    }
+}
+
 function closeDevelopmentMessage() {
-    document.getElementById("development-message").style.display = "none";
+    document.getElementById('development-message').style.display = 'none';
 }
