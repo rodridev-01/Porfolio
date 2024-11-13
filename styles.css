@@ -81,6 +81,39 @@ section{
     color: #d0d0d0;
 }
 
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+}
+
+.skills li {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #d0d0d0;
+    background-color: #222;
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skills li i {
+    font-size: 20px;
+    color: #f7c02b; 
+    margin-right: 8px;
+}
+
+.skills li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
 .hero {
     text-align: center;
     max-width: 600px;
@@ -425,6 +458,10 @@ form button:hover {
 }
 .dark-mode .project-card h3{
     color: #000;
+}
+.dark-mode .skills li {
+    color: #000;
+    background-color: #fff;
 }
 
 .development-message {
