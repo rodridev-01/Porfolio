@@ -112,50 +112,123 @@ section{
     transform: translateY(-5px);
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
 }
-
-
 .hero {
     text-align: center;
     max-width: 600px;
-    margin-top: 40px;
+    margin: 65px auto 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 20px;
 }
 
-.hero h1 {
-    font-size: 2.5em;
-    color: #ffffff;
-    font-family: 'Star Jedi', sans-serif;
-}
-
-.hero p {
-    font-size: 1.1em;
-    line-height: 1.5;
-    margin: 15px 0;
-    text-align: left;
-}
-
-.hero p strong,
-p strong {
-    color: #EAB308;
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    flex-direction: column; 
 }
 
 .profile-pic {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    margin-top: 20px;
 }
 
 .availability {
-    display: inline-block;
     background-color: #293241;
     color: #95ec83;
     padding: 5px 10px;
     border-radius: 15px;
-    margin-top: 10px;
     font-size: 14px;
+    margin-top: 10px;
+}
+
+.hero h1 {
+    margin-top: 20px;
+}
+
+.hero p {
+    margin: 15px 0;
+    text-align: left;
+}
+
+.hero p strong {
+    color: #EAB308;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: nowrap; 
+}
+
+.button {
+    background-color: #222;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.8em;
+    display: flex;
+    align-items: center; 
+}
+
+.button i {
+    margin-right: 5px;
+    display: inline-block; 
+}
+/* Responsive Design */
+@media (max-width: 600px) {
+    section {
+        padding: 20px;
+    }
+
+    .navbar {
+        max-width: 350px;
+    }
+    
+    .navbar a {
+        font-size: 12px;
+    }
+    
+    .navbar ul {
+        list-style: none;
+        display: flex;
+        gap: 10px; 
+        padding: 0;
+        margin: 0;
+    }
+    .profile-section {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .profile-pic {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+    }
+    
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .button {
+        padding: 8px 15px;
+    }
+}
+
+p strong {
+    color: #EAB308;
 }
 
 /* Text Styles */
@@ -356,27 +429,6 @@ form button {
 form button:hover {
     background-color: #fff;
 }
-
-/* Buttons */
-.buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.button {
-    text-decoration: none;
-    background-color: #222;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 20px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
 .button:hover {
     background-color: #333;
     color: #EAB308;
