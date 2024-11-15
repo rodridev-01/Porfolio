@@ -402,18 +402,29 @@ p {
 }
 
 /* Contact Form */
+.contact {
+    width: 100%; 
+    padding: 20px; 
+    box-sizing: border-box; 
+}
 form {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    width: 100%; 
+    max-width: 600px; 
+    margin: 0 auto; 
 }
+
 form input,
 form textarea {
     padding: 10px;
+    width: 100%; 
     background: #333;
     border: 1px solid #f7c02b;
     color: #f7c02b;
     border-radius: 5px;
+    box-sizing: border-box; 
 }
 
 form button {
@@ -424,6 +435,7 @@ form button {
     cursor: pointer;
     transition: background 0.3s;
     border-radius: 5px;
+    width: 100%; 
 }
 
 form button:hover {
