@@ -221,7 +221,7 @@ section{
     p {
         font-size: 1em;
     }
-
+    
     .button {
         padding: 8px 15px;
     }
@@ -619,4 +619,17 @@ h2{
 
 .footer-links a:hover {
     color: #f7c02b;
+}
+
+/* Buttons */
+.button2 {
+    text-decoration: none;
+    background-color: #222;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
